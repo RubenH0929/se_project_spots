@@ -21,12 +21,12 @@
   width: 100%;
 }
 
-.cards__list_title {
+.cards__list-title {
   font-size: 20px;
   margin: 0;
 }
 
-.cards__list_photos {
+.cards__list-photos {
   display: block;
   max-width: 413px;
   max-height: 413px;
