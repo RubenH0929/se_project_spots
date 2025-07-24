@@ -22,3 +22,5 @@ This project is a responsive profile and content card layout built using HTML an
 **Figma**
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+
+- [Link to the website](https://rubenh0929.github.io/se_project_spots/)
