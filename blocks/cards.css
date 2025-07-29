@@ -23,7 +23,11 @@
 
 .cards__list-title {
   font-size: 20px;
+  font-weight: 500;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .cards__list-photos {
@@ -41,7 +45,7 @@
   opacity: 40%;
 }
 
-.card__like-button:hover{
+.card__like-button:hover {
   opacity: 100%;
   cursor: pointer;
 }
@@ -50,10 +54,20 @@
   max-height: 445px;
 }
 
-
 @media screen and (max-width: 630px) {
   .cards__list {
-    display: flex;
+    grid-template-columns: repeat(auto-fit, 288px);
+    gap: 20px 12px;
     flex-direction: column;
+  }
+
+  .cards__list-title {
+    font-size: 16px;
+  }
+
+  .cards__list-photos {
+    display: block;
+    max-width: 288px;
+    max-height: 288px;
   }
 }
