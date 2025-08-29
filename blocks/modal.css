@@ -1,7 +1,7 @@
 .modal {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  transition: visibility 0.5s linear, opacity 0.5s linear;
   background-color: #00000080;
   position: fixed;
   top: 0;
@@ -40,6 +40,11 @@
   justify-content: center;
   border: none;
   opacity: 40%;
+  cursor: pointer;
+}
+
+.modal__close-btn:hover {
+  opacity: 100%;
 }
 
 .modal__title {
@@ -58,8 +63,7 @@
   margin: 8px 0 0;
   width: 100%;
   padding: 16px 0 16px 12px;
-  border-radius: 8px;
-  border-color: #21212166;
+  border: 1px solid rgba(33, 33, 33, 0.4);
 }
 
 .modal__label {
@@ -73,6 +77,7 @@
   color: #2121214d;
   font-size: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .modal__submit-btn {
