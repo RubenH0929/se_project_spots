@@ -33,11 +33,11 @@ function closeModal(modal) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileSummaryInput.value = profileSummaryEl.textContent;
-  closeModal(editProfileModal);
+  openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-  openModal(editProfileModal);
+  closeModal(editProfileModal);
 });
 
 newPostBtn.addEventListener("click", function () {
