@@ -9,8 +9,34 @@
   cursor: pointer;
 }
 
+.card__like-button_active {
+  background-image: url(../images/Liked.svg);
+  opacity: 1;
+}
+
+.card__like-button_active:hover {
+  opacity: 0.4;
+}
+
+.card__delete-button {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url(../images/Delete.svg);
+  background-color: transparent;
+  border: 0;
+}
+
+.card__delete-button:hover {
+  background-image: url(../images/deleteHover.svg);
+  cursor: pointer;
+}
+
 .card {
   max-height: 445px;
+  position: relative;
 }
 
 .card__description {
