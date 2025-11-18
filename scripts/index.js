@@ -95,10 +95,12 @@ previewModalCloseBtn.addEventListener("click", function () {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -132,7 +134,8 @@ function handleEditProfileSubmit(evt) {
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
-function handleEscClose(evt) { //This closes the modal when I press the ESC key
+function handleEscClose(evt) {
+  //This closes the modal when I press the ESC key
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_is-opened");
     if (openedModal) {
@@ -165,12 +168,11 @@ initialCards.forEach(function (item) {
   cardsList.append(cardElement);
 });
 
-document.querySelectorAll(".modal").forEach((modal) => { //This exits the modal when I click outside of it
+document.querySelectorAll(".modal").forEach((modal) => {
+  //This exits the modal when I click outside of it
   modal.addEventListener("mousedown", (evt) => {
     if (evt.target === modal) {
       closeModal(modal);
     }
   });
 });
-
-document.addEventListener("keydown", handleEscClose);

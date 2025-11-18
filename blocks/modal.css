@@ -85,13 +85,13 @@
   letter-spacing: 0%;
 }
 
-.modal__input:hover{
+.modal__input:hover {
   border: 1px solid #212121;
   cursor: pointer;
 }
 
-.modal__input_type_error{
-  border: 1px solid rgba(255, 0, 0, .6);
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
 }
 
 .modal__label {
@@ -126,7 +126,7 @@
   opacity: 80%;
 }
 
-.modal__submit-btn-disabled{
+.modal__submit-btn-disabled {
   opacity: 50%;
 }
 
@@ -154,9 +154,9 @@
   margin-top: 8px;
 }
 
-.modal__error{
+.modal__error {
   display: block;
-  color: #FF0000B2;
+  color: #ff0000b2;
   font-size: 16px;
   font-weight: 500;
   line-height: 110%;
