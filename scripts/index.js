@@ -29,7 +29,6 @@ const editProfileBtn = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
-const editNewPostModal = editProfileModal.querySelector(".modal__label");
 const editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input"
 );
