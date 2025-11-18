@@ -25,4 +25,10 @@ This project is a responsive profile and content card layout built using HTML an
 
 - [Link to the website](https://rubenh0929.github.io/se_project_spots/)
 
-- [Link to video](https://drive.google.com/file/d/1DpT9HZIRG2dvZjFQKJ7incK1SCmycCN1/view?usp=sharing)
+##Project Pitch Video
+
+Check out these videos, where I describe my
+project and some challenges I faced while building it.
+
+- [Spots Stage 1](https://drive.google.com/file/d/1DpT9HZIRG2dvZjFQKJ7incK1SCmycCN1/view?usp=sharing)
+  [Spots stage 2](https://drive.google.com/file/d/1VpOOAT0wxKFE4Dh66MmI99KYiEtzaz2V/view?usp=sharing)

@@ -52,6 +52,7 @@ const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewCaptionEl = previewModal.querySelector(".modal__caption");
+const cardSubmitButton = newPostModal.querySelector(".modal__submit-btn");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
@@ -101,8 +102,12 @@ function closeModal(modal) {
 }
 
 editProfileBtn.addEventListener("click", function () {
-  editProfileNameInput.value = profileNameEl.textContent;
-  editProfileSummaryInput.value = profileSummaryEl.textContent;
+  editProfileNameInput.value = profileNameEl.textContent.trim();
+  editProfileSummaryInput.value = profileSummaryEl.textContent.trim();
+  resetValidation(editProfileForm, [
+    editProfileNameInput,
+    editProfileSummaryInput,
+  ]);
   openModal(editProfileModal);
 });
 
@@ -127,6 +132,15 @@ function handleEditProfileSubmit(evt) {
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
+function handleEscClose(evt) { //This closes the modal when I press the ESC key
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
@@ -138,9 +152,10 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
-  closeModal(newPostModal);
-
   evt.target.reset();
+
+  disableButton(cardSubmitButton, settings);
+  closeModal(newPostModal);
 }
 
 newPostForm.addEventListener("submit", handleAddCardSubmit);
@@ -149,3 +164,13 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+document.querySelectorAll(".modal").forEach((modal) => { //This exits the modal when I click outside of it
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+
+document.addEventListener("keydown", handleEscClose);
